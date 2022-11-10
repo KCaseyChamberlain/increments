@@ -1,7 +1,7 @@
 const fs = require('fs');
 const express = require('express');
 const path = require("path");
-var notes = require('./db/db.json');
+var count = require('./db/db.json');
 var dataBase = path.join(__dirname, "./db/db.json");
 
 const PORT = process.env.PORT || 3001;
@@ -12,13 +12,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
 
-
+// API route
 app.get('/api', (req, res) => {
-    fs.readFile(dataBase, "utf-8", function (err, incrementValue) {
+    fs.readFile(dataBase, "utf-8", function (err, noteValues) {
         if (err) throw err
         else {
-            noteValues = JSON.parse(incrementValue)
-            return res.json(incrementValue)
+            noteValues = JSON.parse(noteValues)
+            return res.json(noteValues)
         }
     })
 });

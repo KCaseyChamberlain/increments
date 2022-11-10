@@ -17,10 +17,14 @@ const renderCount = async (count) => {
 
 const handleIncrement = () => {
     console.log('increment')
+
+    renderCount()
 };
 
 const handleDecrement = () => {
     console.log('decrement')
+
+    renderCount()
 };
 
 

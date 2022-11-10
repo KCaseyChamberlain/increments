@@ -13,8 +13,15 @@ app.use(express.static('public'));
 app.use(express.json());
 
 
-
-
+app.get('/api', (req, res) => {
+    fs.readFile(dataBase, "utf-8", function (err, incrementValue) {
+        if (err) throw err
+        else {
+            noteValues = JSON.parse(incrementValue)
+            return res.json(incrementValue)
+        }
+    })
+});
 
 
 app.get("*", (req, res) => {

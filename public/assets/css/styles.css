@@ -1,0 +1,30 @@
+main {
+    display: grid;
+    justify-content: center;
+    background-color: rgb(248, 248, 223);
+    padding: 3em
+}
+
+figure {
+    font-size: x-large;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+
+button[name="decrement"] {
+    color: red;
+}
+
+button[name="increment"] {
+    color: rgb(62, 197, 80);
+}
+
+img {
+    display: flex;
+    margin: auto;
+    padding: 1em;
+}

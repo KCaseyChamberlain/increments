@@ -10,6 +10,8 @@ const getCount = () =>
         },
     });
 
+const renderCount = async (count) => {
+};
 
 
 
@@ -19,11 +21,6 @@ const handleIncrement = () => {
 
 const handleDecrement = () => {
     console.log('decrement')
-};
-
-
-
-const renderCount = async (count) => {
 };
 
 

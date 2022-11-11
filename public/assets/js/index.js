@@ -1,36 +1,32 @@
 let incrementBtn = document.querySelector("button[name='increment']");
 let decrementBtn = document.querySelector("button[name='decrement']");
-let count = document.querySelector("figure")
+let counter = document.querySelector("figure")
 
 const getCount = () =>
-    fetch('/api', {
+    fetch('/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         },
     });
 
-const renderCount = async (count) => {
+const renderCount = () => {
 };
 
 
 
 const handleIncrement = () => {
-    console.log('increment')
-
-    renderCount()
+    console.log('decrement')
 };
 
 const handleDecrement = () => {
     console.log('decrement')
-
-    renderCount()
 };
 
 
-const getAndRenderCount = () => getCount().then(renderCount);
 
 incrementBtn.addEventListener('click', handleIncrement);
 decrementBtn.addEventListener('click', handleDecrement);
 
-getAndRenderCount();
+getCount();
+renderCount();
